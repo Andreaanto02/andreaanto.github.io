@@ -34,4 +34,161 @@
     a:hover{text-decoration:underline}
     .container{
       max-width: 980px;
-      margin:
+      margin: 0 auto;
+      padding: 42px 18px 70px;
+    }
+    .top{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:16px;
+      flex-wrap:wrap;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 12px;
+      border-radius:999px;
+      background: var(--panel);
+      border:1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+      backdrop-filter: blur(10px);
+    }
+    .hero{
+      padding: 26px 24px;
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+    h1{
+      margin:0 0 10px 0;
+      font-size: 30px;
+      letter-spacing:-0.02em;
+    }
+    .subtitle{
+      margin:0;
+      color: var(--muted);
+      line-height:1.6;
+      font-size: 14px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:16px;
+      margin-top:16px;
+    }
+    @media (max-width: 820px){
+      .grid{grid-template-columns:1fr}
+    }
+    .card{
+      padding: 18px 18px 16px;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.06);
+      border:1px solid var(--border);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.22);
+    }
+    .card h3{
+      margin:0 0 8px 0;
+      font-size: 16px;
+    }
+    .card p{
+      margin:0 0 10px 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:10px;
+    }
+    .tag{
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.05);
+      color: rgba(234,240,255,0.9);
+    }
+    .back{
+      margin-top: 18px;
+      display:inline-flex;
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .footer{
+      margin-top: 26px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:space-between;
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="top">
+      <div class="pill">📊 Corporate Finance</div>
+      <div class="pill">Valuation</div>
+    </div>
+
+    <div class="hero">
+      <h1>Valuation</h1>
+      <p class="subtitle">
+        Projects focused on business valuation, investment decisions and deal-related analysis.
+        This section collects valuation-focused deliverables (models, writeups, frameworks).
+      </p>
+
+      <a class="back" href="../">← Back to Corporate Finance</a>
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>What you’ll find here</h3>
+        <p>
+          Company valuation logic, investment reasoning, assumptions, sensitivity analysis,
+          and structured output quality (consulting-style).
+        </p>
+        <div class="tags">
+          <span class="tag">Valuation logic</span>
+          <span class="tag">Assumptions</span>
+          <span class="tag">Sensitivity</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Next items to upload</h3>
+        <p>
+          Add files (PDF/Excel) here and link them inside this page. We can create a clean list
+          of projects with “Open PDF” buttons.
+        </p>
+        <div class="tags">
+          <span class="tag">PDF</span>
+          <span class="tag">Excel</span>
+          <span class="tag">Slides</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <div>© 2026 Andrea Antonuzzo</div>
+      <div><a href="../../">Home</a></div>
+    </div>
+
+  </div>
+</body>
+</html>
+
