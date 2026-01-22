@@ -216,9 +216,9 @@
       <div class="section">
         <h2>About</h2>
         <p class="subtitle" style="margin-top:0;">
-          I’m an Italian M.Sc. Finance student at Stevens Institute of Technology, powered by coffee and curiosity.
+          I’m an Italian M.Sc. Finance student at Stevens Institute of Technology, fueled by coffee and curiosity.
           I’m into consulting, corporate finance, and figuring out how businesses actually work.
-          I created this GitHub to share my projects, my progress, and what I’m learning along the way.
+          I created this GitHub to share my projects, and what I’m learning along the way, from models to casework, and from “quick analysis” to “why is this taking 6 hours.”.
           <br><br>
           <span style="color:rgba(234,240,255,0.88)">
             <em>Fun fact:</em> I’ve studied and worked across four countries: the U.S., Italy, Australia, and Finland.
@@ -260,4 +260,394 @@
         LinkedIn: <a href="https://www.linkedin.com/in/andrea-antonuzzo/" target="_blank">andrea-antonuzzo</a> ·
         Email: <a href="mailto:aantonuz@stevens.edu">aantonuz@stevens.edu</a> ·
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Consulting | Andrea Antonuzzo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #0b1220;
+      --panel: rgba(255,255,255,0.06);
+      --panel2: rgba(255,255,255,0.08);
+      --text: #eaf0ff;
+      --muted: rgba(234,240,255,0.75);
+      --border: rgba(255,255,255,0.12);
+      --accent: #7dd3fc;
+      --accent2:#a78bfa;
+      --shadow: 0 14px 40px rgba(0,0,0,0.35);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(900px 500px at 15% 10%, rgba(125,211,252,0.22), transparent 60%),
+        radial-gradient(700px 450px at 85% 20%, rgba(167,139,250,0.18), transparent 60%),
+        radial-gradient(900px 650px at 50% 100%, rgba(125,211,252,0.10), transparent 55%),
+        var(--bg);
+      min-height:100vh;
+    }
+    a{color: var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 42px 18px 70px;
+    }
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      margin-bottom: 18px;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 12px;
+      border-radius:999px;
+      background: var(--panel);
+      border:1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+      backdrop-filter: blur(10px);
+    }
+    .hero{
+      padding: 22px 22px;
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+    h1{
+      margin:0 0 8px 0;
+      font-size: 34px;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    .subtitle{
+      margin:0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height:1.6;
+    }
+    .chips{
+      margin-top: 12px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .chip{
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,0.06);
+      color: rgba(234,240,255,0.88);
+      font-size: 12px;
+    }
+
+    .section{margin-top:18px}
+    .section h2{
+      margin: 16px 0 10px;
+      font-size: 14px;
+      letter-spacing: -0.01em;
+      color: rgba(234,240,255,0.92);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 10px;
+    }
+    @media (max-width: 820px){
+      .grid{grid-template-columns:1fr}
+      h1{font-size:30px}
+    }
+
+    .card{
+      padding: 18px 18px 16px;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.06);
+      border:1px solid var(--border);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.22);
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    }
+    .card:hover{
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(125,211,252,0.35);
+    }
+    .card h3{
+      margin: 0 0 8px 0;
+      font-size: 16px;
+      letter-spacing: -0.01em;
+    }
+    .card p{
+      margin: 0 0 12px 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin: 10px 0 12px;
+    }
+    .tag{
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.05);
+      color: rgba(234,240,255,0.9);
+    }
+    .cta{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      margin-top: 2px;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .footer{
+      margin-top: 22px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:space-between;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .footer a{color: rgba(234,240,255,0.92)}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="topbar">
+      <div class="pill">🧭 Consulting</div>
+      <div class="pill"><a href="../">← Back to Home</a></div>
+    </div>
+
+    <div class="hero">
+      <h1>Consulting</h1>
+      <p class="subtitle">Go-to-market strategy, turnaround &amp; restructuring, and business transformation.</p>
+
+      <div class="chips">
+        <span class="chip">Go-To-Market</span>
+        <span class="chip">Turnaround &amp; Restructuring</span>
+        <span class="chip">Business Transformation</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Areas</h2>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>Go-To-Market</h3>
+          <p>Market entry, positioning, growth plan, and launch execution.</p>
+          <div class="tags">
+            <span class="tag">Strategy</span>
+            <span class="tag">Pricing</span>
+            <span class="tag">Distribution</span>
+          </div>
+          <a class="cta" href="go-to-market/">Open Go-To-Market →</a>
+        </div>
+
+        <div class="card">
+          <h3>Turnaround &amp; Restructuring</h3>
+          <p>Performance diagnosis, cash focus, cost actions, and restructuring planning.</p>
+          <div class="tags">
+            <span class="tag">Liquidity</span>
+            <span
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Go-To-Market | Consulting</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0b1220; --text:#eaf0ff; --muted:rgba(234,240,255,.75);
+      --panel:rgba(255,255,255,.06); --border:rgba(255,255,255,.12);
+      --accent:#7dd3fc; --shadow:0 14px 40px rgba(0,0,0,.35); --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 500px at 15% 10%, rgba(125,211,252,0.22), transparent 60%),
+        radial-gradient(700px 450px at 85% 20%, rgba(167,139,250,0.18), transparent 60%),
+        var(--bg);
+      min-height:100vh;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:980px; margin:0 auto; padding:42px 18px 70px}
+    .topbar{display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:18px}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px; padding:10px 12px; border-radius:999px;
+      background:var(--panel); border:1px solid var(--border); color:var(--muted); font-size:13px;
+      backdrop-filter: blur(10px);
+    }
+    .hero{
+      padding:22px; border-radius:var(--radius);
+      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+      border:1px solid var(--border); box-shadow:var(--shadow); backdrop-filter: blur(10px);
+    }
+    h1{margin:0 0 8px; font-size:30px; letter-spacing:-.02em}
+    p{margin:0; color:var(--muted); line-height:1.6}
+    .card{
+      margin-top:14px;
+      padding:18px; border-radius:var(--radius);
+      background:rgba(255,255,255,.06); border:1px solid var(--border);
+      box-shadow:0 10px 28px rgba(0,0,0,.22);
+    }
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      margin-top:12px; padding:10px 12px; border-radius:12px;
+      background:rgba(125,211,252,.14); border:1px solid rgba(125,211,252,.35);
+      color:var(--text); font-weight:600; font-size:13px;
+    }
+    .btn:hover{ text-decoration:none; filter:brightness(1.05); }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="topbar">
+      <div class="pill">📌 Go-To-Market</div>
+      <div class="pill"><a href="../">← Back to Consulting</a></div>
+    </div>
+
+    <div class="hero">
+      <h1>Go-To-Market</h1>
+      <p>Selected projects and materials focused on market entry, growth, and launch execution.</p>
+
+      <div class="card">
+        <h2 style="margin:0 0 6px; font-size:16px; letter-spacing:-.01em;">Go-To-Market Strategy — Insomnia Cookies</h2>
+        <p>Project paper focused on GTM strategy design and execution plan.</p>
+
+        <a class="btn" href="../../Go-To-Market-Strategy%20-%20Insomnia%20Cookies.pdf" target="_blank" rel="noopener">
+          📄 Open PDF
+        </a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Turnaround & Restructuring | Consulting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b1220;--text:#eaf0ff;--muted:rgba(234,240,255,.75);--panel:rgba(255,255,255,.06);--border:rgba(255,255,255,.12);--accent:#7dd3fc;--shadow:0 14px 40px rgba(0,0,0,.35);--radius:18px;}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);
+      background:radial-gradient(900px 500px at 15% 10%, rgba(125,211,252,0.22), transparent 60%), var(--bg);min-height:100vh;}
+    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+    .container{max-width:980px;margin:0 auto;padding:42px 18px 70px}
+    .topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:999px;background:var(--panel);border:1px solid var(--border);color:var(--muted);font-size:13px;backdrop-filter:blur(10px)}
+    .hero{padding:22px;border-radius:var(--radius);background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));border:1px solid var(--border);box-shadow:var(--shadow);backdrop-filter:blur(10px)}
+    h1{margin:0 0 8px;font-size:30px;letter-spacing:-.02em}
+    p{margin:0;color:var(--muted);line-height:1.6}
+    .card{margin-top:14px;padding:18px;border-radius:var(--radius);background:rgba(255,255,255,.06);border:1px solid var(--border);box-shadow:0 10px 28px rgba(0,0,0,.22)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="pill">🧯 Turnaround &amp; Restructuring</div>
+      <div class="pill"><a href="../">← Back to Consulting</a></div>
+    </div>
+
+    <div class="hero">
+      <h1>Turnaround &amp; Restructuring</h1>
+      <p>Work in progress. Here I’ll publish turnaround frameworks, diagnostic approaches, and case-based analyses.</p>
+
+      <div class="card">
+        <strong>Coming soon:</strong>
+        <p style="margin-top:6px;">KPI trees, cash waterfall, cost actions, and restructuring planning templates.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Business Transformation | Consulting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b1220;--text:#eaf0ff;--muted:rgba(234,240,255,.75);--panel:rgba(255,255,255,.06);--border:rgba(255,255,255,.12);--accent:#7dd3fc;--shadow:0 14px 40px rgba(0,0,0,.35);--radius:18px;}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);
+      background:radial-gradient(900px 500px at 15% 10%, rgba(167,139,250,0.18), transparent 60%), var(--bg);min-height:100vh;}
+    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+    .container{max-width:980px;margin:0 auto;padding:42px 18px 70px}
+    .topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:999px;background:var(--panel);border:1px solid var(--border);color:var(--muted);font-size:13px;backdrop-filter:blur(10px)}
+    .hero{padding:22px;border-radius:var(--radius);background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));border:1px solid var(--border);box-shadow:var(--shadow);backdrop-filter:blur(10px)}
+    h1{margin:0 0 8px;font-size:30px;letter-spacing:-.02em}
+    p{margin:0;color:var(--muted);line-height:1.6}
+    .card{margin-top:14px;padding:18px;border-radius:var(--radius);background:rgba(255,255,255,.06);border:1px solid var(--border);box-shadow:0 10px 28px rgba(0,0,0,.22)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="pill">🔁 Business Transformation</div>
+      <div class="pill"><a href="../">← Back to Consulting</a></div>
+    </div>
+
+    <div class="hero">
+      <h1>Business Transformation</h1>
+      <p>Work in progress. Here I’ll share projects focused on operating model design, process improvement, and execution governance.</p>
+
+      <div class="card">
+        <strong>Coming soon:</strong>
+        <p style="margin-top:6px;">Operating model maps, process redesign, KPIs, and governance (PMO) structures.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
 
