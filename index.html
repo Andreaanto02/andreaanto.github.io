@@ -34,6 +34,7 @@
         radial-gradient(700px 450px at 85% 20%, rgba(167,139,250,0.18), transparent 60%),
         radial-gradient(900px 650px at 50% 100%, rgba(125,211,252,0.10), transparent 55%),
         var(--bg);
+      min-height: 100vh;
     }
 
     a{color: var(--accent); text-decoration:none}
@@ -51,6 +52,7 @@
       align-items:center;
       gap:12px;
       margin-bottom: 26px;
+      flex-wrap: wrap;
     }
 
     .pill{
@@ -79,8 +81,25 @@
       display:flex;
       align-items:center;
       justify-content:space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .hero-left{
+      display:flex;
+      align-items:center;
       gap:18px;
       flex-wrap:wrap;
+    }
+
+    .profile-pic{
+      width: 110px;
+      height: 110px;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 2px solid rgba(255,255,255,0.18);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
     }
 
     h1{
@@ -99,31 +118,6 @@
       gap:10px;
       align-items:center;
       line-height: 1.6;
-    }
-
-    .hero-actions{
-      display:flex;
-      gap:10px;
-      align-items:center;
-      flex-wrap:wrap;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:10px 12px;
-      border-radius:12px;
-      background:rgba(125,211,252,.14);
-      border:1px solid rgba(125,211,252,.35);
-      color:var(--text);
-      font-weight:600;
-      font-size:13px;
-      text-decoration:none;
-    }
-    .btn:hover{
-      filter:brightness(1.07);
-      text-decoration:none;
     }
 
     .chips{
@@ -226,6 +220,25 @@
       font-size: 13px;
     }
     .footer a{color: rgba(234,240,255,0.92)}
+
+    /* CV button */
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      border-radius: 14px;
+      background: rgba(125,211,252,0.14);
+      border: 1px solid rgba(125,211,252,0.35);
+      color: var(--text);
+      font-weight: 700;
+      font-size: 13px;
+      text-decoration: none;
+    }
+    .btn:hover{
+      text-decoration:none;
+      filter: brightness(1.05);
+    }
   </style>
 </head>
 
@@ -240,9 +253,13 @@
     <div class="hero">
 
       <div class="hero-header">
-        <div>
-          <h1>Andrea Antonuzzo</h1>
-          <p class="subtitle">Personal Project Portfolio</p>
+        <div class="hero-left">
+          <img class="profile-pic" src="profile.jpg" alt="Andrea Antonuzzo" />
+
+          <div>
+            <h1>Andrea Antonuzzo</h1>
+            <p class="subtitle">Personal Project Portfolio</p>
+          </div>
         </div>
 
         <div class="hero-actions">
@@ -263,8 +280,7 @@
         <p class="subtitle" style="margin-top:0;">
           I’m an Italian M.Sc. Finance student at Stevens Institute of Technology, powered by coffee and curiosity.
           I’m into consulting, corporate finance, and figuring out how businesses actually work.
-          I created this GitHub to share my projects, my progress, and everything I’m learning along the way,
-          from a “quick analysis” to “why is this taking 6 hours”.
+          I created this GitHub to share my projects, my progress, and everything I’m learning along the way, from a “quick analysis” to “why is this taking 6 hours”.
           <br><br>
           <span style="color:rgba(234,240,255,0.88)">
             <em>Fun fact:</em> I’ve studied and worked across four countries: the U.S., Italy, Australia, and Finland.
@@ -277,7 +293,6 @@
       <h2>Portfolio</h2>
 
       <div class="grid">
-
         <div class="card">
           <h3>Corporate Finance</h3>
           <p>Valuation and financial performance projects (DCF, WACC, multiples).</p>
@@ -298,26 +313,30 @@
           </div>
           <a class="cta" href="consulting/">Open Consulting →</a>
         </div>
-
       </div>
     </div>
 
     <div class="footer">
       <div>
         LinkedIn:
-        <a href="https://www.linkedin.com/in/andrea-antonuzzo/" target="_blank" rel="noopener">andrea-antonuzzo</a>
+        <a href="https://www.linkedin.com/in/andrea-antonuzzo/" target="_blank" rel="noopener">
+          andrea-antonuzzo
+        </a>
         · Email:
         <a href="mailto:aantonuz@stevens.edu">aantonuz@stevens.edu</a>
-        ·
-        <a href="Resume%20Andrea%20Antonuzzo.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
       </div>
 
-      <div>© 2026 Andrea Antonuzzo</div>
+      <div>© <span id="y"></span> Andrea Antonuzzo</div>
     </div>
 
   </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
 
 
 
