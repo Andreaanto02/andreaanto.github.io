@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Andrea Antonuzzo | Portfolio</title>
 
+  <!-- Modern font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,8 +18,8 @@
       --text: #eaf0ff;
       --muted: rgba(234,240,255,0.75);
       --border: rgba(255,255,255,0.12);
-      --accent: #7dd3fc;
-      --accent2:#a78bfa;
+      --accent: #7dd3fc;   /* light blue */
+      --accent2:#a78bfa;   /* soft purple */
       --shadow: 0 14px 40px rgba(0,0,0,0.35);
       --radius: 18px;
     }
@@ -90,7 +91,6 @@
       flex-wrap:wrap;
       gap:10px;
       align-items:center;
-      line-height:1.6;
     }
 
     .chips{
@@ -119,6 +119,8 @@
     @media (max-width: 820px){
       h1{font-size:36px}
       .grid{grid-template-columns:1fr}
+      .hero-header{flex-direction:column; align-items:flex-start}
+      .profile-pic{width:92px; height:92px}
     }
 
     .card{
@@ -193,25 +195,24 @@
       font-size: 13px;
     }
     .footer a{color: rgba(234,240,255,0.92)}
-  <style>
-  ...
-  .footer a{color: rgba(234,240,255,0.92)}
 
-  .profile-pic{
-    width: 110px;
-    height: 110px;
-    border-radius: 999px;
-    object-fit: cover;
-    border: 2px solid rgba(255,255,255,0.18);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
-  }
-  .hero-header{
-    display:flex;
-    align-items:center;
-    gap:18px;
-  }
-</style>
-
+    /* Profile picture + header layout */
+    .profile-pic{
+      width: 110px;
+      height: 110px;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 2px solid rgba(255,255,255,0.18);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+      flex: 0 0 auto;
+    }
+    .hero-header{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      margin-bottom: 8px;
+    }
+  </style>
 </head>
 
 <body>
@@ -223,8 +224,14 @@
     </div>
 
     <div class="hero">
-      <h1>Andrea Antonuzzo</h1>
-      <p class="subtitle">Finance &amp; Strategy · Project Portfolio</p>
+
+      <div class="hero-header">
+        <img src="profile.jpg" alt="Andrea Antonuzzo" class="profile-pic" />
+        <div>
+          <h1>Andrea Antonuzzo</h1>
+          <p class="subtitle">Personal Project Portfolio</p>
+        </div>
+      </div>
 
       <div class="chips">
         <span class="chip">M.Sc. Finance @ Stevens Institute of Technology</span>
@@ -237,7 +244,7 @@
         <p class="subtitle" style="margin-top:0;">
           I’m an Italian M.Sc. Finance student at Stevens Institute of Technology, powered by coffee and curiosity.
           I’m into consulting, corporate finance, and figuring out how businesses actually work.
-          I created this GitHub to share my projects, my progress, and what I’m learning along the way.
+          I created this GitHub to share my projects, my progress, and everything I’m learning along the way, from a “quick analysis” to “why is this taking 6 hours.”.
           <br><br>
           <span style="color:rgba(234,240,255,0.88)">
             <em>Fun fact:</em> I’ve studied and worked across four countries: the U.S., Italy, Australia, and Finland.
@@ -250,9 +257,10 @@
       <h2>Portfolio</h2>
 
       <div class="grid">
+
         <div class="card">
           <h3>Corporate Finance</h3>
-          <p>Valuation and financial performance projects.</p>
+          <p>Valuation and financial performance projects (DCF, WACC, multiples).</p>
           <div class="tags">
             <span class="tag">Valuation</span>
             <span class="tag">Financial Performance</span>
@@ -270,6 +278,7 @@
           </div>
           <a class="cta" href="consulting/">Open Consulting →</a>
         </div>
+
       </div>
     </div>
 
@@ -277,14 +286,19 @@
       <div>
         LinkedIn: <a href="https://www.linkedin.com/in/andrea-antonuzzo/" target="_blank" rel="noopener">andrea-antonuzzo</a> ·
         Email: <a href="mailto:aantonuz@stevens.edu">aantonuz@stevens.edu</a> ·
-        Phone: 🇺🇸 +1 201-241-6048 · 🇪🇺 +39 391-140-8043 ·
         <a href="Resume%20Andrea%20Antonuzzo.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
       </div>
-      <div>© 2026 Andrea Antonuzzo</div>
+
+      <div>© <span id="y"></span> Andrea Antonuzzo</div>
     </div>
 
   </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
 
 
