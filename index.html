@@ -51,7 +51,6 @@
       align-items:center;
       gap:12px;
       margin-bottom: 26px;
-      flex-wrap:wrap;
     }
 
     .pill{
@@ -76,6 +75,14 @@
       backdrop-filter: blur(10px);
     }
 
+    .hero-header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
     h1{
       margin:0 0 8px 0;
       font-size: 44px;
@@ -91,6 +98,32 @@
       flex-wrap:wrap;
       gap:10px;
       align-items:center;
+      line-height: 1.6;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 12px;
+      border-radius:12px;
+      background:rgba(125,211,252,.14);
+      border:1px solid rgba(125,211,252,.35);
+      color:var(--text);
+      font-weight:600;
+      font-size:13px;
+      text-decoration:none;
+    }
+    .btn:hover{
+      filter:brightness(1.07);
+      text-decoration:none;
     }
 
     .chips{
@@ -119,8 +152,6 @@
     @media (max-width: 820px){
       h1{font-size:36px}
       .grid{grid-template-columns:1fr}
-      .hero-header{flex-direction:column; align-items:flex-start}
-      .profile-pic{width:92px; height:92px}
     }
 
     .card{
@@ -195,23 +226,6 @@
       font-size: 13px;
     }
     .footer a{color: rgba(234,240,255,0.92)}
-
-    /* Profile picture + header layout */
-    .profile-pic{
-      width: 110px;
-      height: 110px;
-      border-radius: 999px;
-      object-fit: cover;
-      border: 2px solid rgba(255,255,255,0.18);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
-      flex: 0 0 auto;
-    }
-    .hero-header{
-      display:flex;
-      align-items:center;
-      gap:18px;
-      margin-bottom: 8px;
-    }
   </style>
 </head>
 
@@ -226,10 +240,15 @@
     <div class="hero">
 
       <div class="hero-header">
-        <img src="profile.jpg" alt="Andrea Antonuzzo" class="profile-pic" />
         <div>
           <h1>Andrea Antonuzzo</h1>
           <p class="subtitle">Personal Project Portfolio</p>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn" href="Resume%20Andrea%20Antonuzzo.pdf" target="_blank" rel="noopener">
+            📄 Download CV
+          </a>
         </div>
       </div>
 
@@ -244,7 +263,8 @@
         <p class="subtitle" style="margin-top:0;">
           I’m an Italian M.Sc. Finance student at Stevens Institute of Technology, powered by coffee and curiosity.
           I’m into consulting, corporate finance, and figuring out how businesses actually work.
-          I created this GitHub to share my projects, my progress, and everything I’m learning along the way, from a “quick analysis” to “why is this taking 6 hours.”.
+          I created this GitHub to share my projects, my progress, and everything I’m learning along the way,
+          from a “quick analysis” to “why is this taking 6 hours”.
           <br><br>
           <span style="color:rgba(234,240,255,0.88)">
             <em>Fun fact:</em> I’ve studied and worked across four countries: the U.S., Italy, Australia, and Finland.
@@ -284,21 +304,21 @@
 
     <div class="footer">
       <div>
-        LinkedIn: <a href="https://www.linkedin.com/in/andrea-antonuzzo/" target="_blank" rel="noopener">andrea-antonuzzo</a> ·
-        Email: <a href="mailto:aantonuz@stevens.edu">aantonuz@stevens.edu</a> ·
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/andrea-antonuzzo/" target="_blank" rel="noopener">andrea-antonuzzo</a>
+        · Email:
+        <a href="mailto:aantonuz@stevens.edu">aantonuz@stevens.edu</a>
+        ·
         <a href="Resume%20Andrea%20Antonuzzo.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
       </div>
 
-      <div>© <span id="y"></span> Andrea Antonuzzo</div>
+      <div>© 2026 Andrea Antonuzzo</div>
     </div>
 
   </div>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
+
 
 
 
