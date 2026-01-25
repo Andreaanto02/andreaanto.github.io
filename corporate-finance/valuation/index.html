@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Valuation | Corporate Finance</title>
+  <title>Financial Performance | Corporate Finance</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,101 +12,187 @@
   <style>
     :root{
       --bg:#0b1220;
+      --panel:rgba(255,255,255,0.06);
+      --panel2:rgba(255,255,255,0.08);
       --text:#eaf0ff;
-      --muted:rgba(234,240,255,.75);
-      --panel:rgba(255,255,255,.06);
-      --border:rgba(255,255,255,.12);
+      --muted:rgba(234,240,255,0.75);
+      --border:rgba(255,255,255,0.12);
       --accent:#7dd3fc;
-      --shadow:0 14px 40px rgba(0,0,0,.35);
+      --accent2:#a78bfa;
+      --shadow:0 14px 40px rgba(0,0,0,0.35);
       --radius:18px;
     }
+
     *{box-sizing:border-box}
     body{
       margin:0;
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color:var(--text);
       background:
-        radial-gradient(900px 500px at 15% 10%, rgba(125,211,252,.22), transparent 60%),
-        radial-gradient(700px 450px at 85% 20%, rgba(167,139,250,.18), transparent 60%),
-        radial-gradient(900px 650px at 50% 100%, rgba(125,211,252,.10), transparent 55%),
+        radial-gradient(900px 500px at 15% 10%, rgba(125,211,252,0.22), transparent 60%),
+        radial-gradient(700px 450px at 85% 20%, rgba(167,139,250,0.18), transparent 60%),
+        radial-gradient(900px 650px at 50% 100%, rgba(125,211,252,0.10), transparent 55%),
         var(--bg);
       min-height:100vh;
     }
-    a{color:var(--accent);text-decoration:none}
+
+    a{color:var(--accent); text-decoration:none}
     a:hover{text-decoration:underline}
 
-    .container{max-width:980px;margin:0 auto;padding:42px 18px 70px;}
-    .topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap;}
+    .container{
+      max-width:980px;
+      margin:0 auto;
+      padding:42px 18px 70px;
+    }
+
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      margin-bottom:26px;
+      flex-wrap:wrap;
+    }
+
     .pill{
-      display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:999px;
-      background:var(--panel);border:1px solid var(--border);color:var(--muted);font-size:13px;
-      backdrop-filter: blur(10px);
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 12px;
+      border-radius:999px;
+      background:var(--panel);
+      border:1px solid var(--border);
+      color:var(--muted);
+      font-size:13px;
+      backdrop-filter:blur(10px);
     }
 
     .hero{
-      padding:24px;border-radius:var(--radius);
-      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
-      border:1px solid var(--border);box-shadow:var(--shadow);backdrop-filter: blur(10px);
+      padding:28px 24px;
+      border-radius:var(--radius);
+      background:linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(10px);
     }
 
-    h1{margin:0 0 10px 0;font-size:38px;letter-spacing:-.02em;line-height:1.1;}
-    .desc{margin:0;color:var(--muted);line-height:1.6;font-size:15px;}
-    .back{display:inline-block;margin-top:12px;font-weight:700;font-size:13px;}
-
-    .card{
-      margin-top:18px;padding:18px;border-radius:var(--radius);
-      background:rgba(255,255,255,.06);border:1px solid var(--border);
-      box-shadow: 0 10px 28px rgba(0,0,0,.22);
+    .hero-header{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:18px;
+      flex-wrap:wrap;
+      margin-bottom:10px;
     }
-    .card h2{margin:0 0 8px 0;font-size:18px;letter-spacing:-.01em;}
+
+    h1{
+      margin:0 0 8px 0;
+      font-size:44px;
+      line-height:1.05;
+      letter-spacing:-0.02em;
+    }
+
+    .subtitle{
+      margin:0;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.6;
+    }
 
     .btn{
-      display:inline-flex;align-items:center;gap:10px;margin-top:12px;padding:10px 14px;
-      border-radius:14px;background:rgba(125,211,252,.14);
-      border:1px solid rgba(125,211,252,.35);color:var(--text);
-      font-weight:800;font-size:13px;text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      border-radius:14px;
+      background:rgba(125,211,252,0.14);
+      border:1px solid rgba(125,211,252,0.35);
+      color:var(--text);
+      font-weight:700;
+      font-size:13px;
+      text-decoration:none;
     }
-    .btn:hover{text-decoration:none;filter:brightness(1.05);}
+    .btn:hover{ text-decoration:none; filter:brightness(1.05); }
+
+    .section{ margin-top:18px; }
+
+    .card{
+      margin-top:18px;
+      padding:18px 18px 16px;
+      border-radius:var(--radius);
+      background:rgba(255,255,255,0.06);
+      border:1px solid var(--border);
+      box-shadow:0 10px 28px rgba(0,0,0,0.22);
+    }
+
+    .card h3{
+      margin:0 0 8px 0;
+      font-size:20px;
+      letter-spacing:-0.01em;
+    }
+
+    .card p{
+      margin:0 0 14px 0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.6;
+      max-width:78ch;
+    }
 
     .footer{
-      margin-top:22px;padding-top:14px;border-top:1px solid rgba(255,255,255,.12);
-      display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:13px;flex-wrap:wrap;
+      margin-top:26px;
+      padding-top:14px;
+      border-top:1px solid rgba(255,255,255,0.12);
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:space-between;
+      color:var(--muted);
+      font-size:13px;
     }
-    .footer a{color:rgba(234,240,255,.92)}
+
+    .footer a{ color: rgba(234,240,255,0.92); }
   </style>
 </head>
 
 <body>
   <div class="container">
 
+    <!-- SAME HEADER STYLE AS VALUATION -->
     <div class="topbar">
       <div class="pill">📊 Corporate Finance</div>
-      <div class="pill">Valuation</div>
+      <div class="pill">Financial Performance</div>
     </div>
 
     <div class="hero">
-      <h1>Valuation</h1>
-      <p class="desc">
-        Valuation projects focused on DCF modeling, WACC assumptions, scenario analysis, and investment decision support.
+      <div class="hero-header">
+        <div>
+          <h1>Financial Performance</h1>
+          <p class="subtitle">
+            Projects focused on analyzing how companies perform over time: profitability drivers, cost structure, KPIs, and operational trends.
+          </p>
+          <div class="section" style="margin-top:14px;">
+            <a class="btn" href="../">← Back to Corporate Finance</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ONE SIMPLE PROJECT CARD (LIKE VALUATION) -->
+    <div class="card">
+      <h3>Iowa Liquor Sales — Power BI Analysis</h3>
+      <p>
+        End-to-end financial performance analysis using Power BI on Iowa liquor sales data. Focus on revenue trends, product mix, geographic performance, and margin drivers.
       </p>
 
-      <a class="back" href="../">← Back to Corporate Finance</a>
+      <a class="btn" href="Iowa_Liquor_Sales_PowerBI.pptx" download>
+        🧾 Download PowerPoint
+      </a>
+    </div>
 
-      <div class="card">
-        <h2>DCF-Driven Strategic Decomposition — Warner Bros. Discovery</h2>
-        <p class="desc">
-          Excel valuation model with a full DCF build, key assumptions, and sensitivity analysis in a contested M&amp;A scenario.
-        </p>
-
-        <a class="btn" href="./WBD_DCF_Valuation.xlsx" target="_blank" rel="noopener">
-          📊 Download Excel Model
-        </a>
-      </div>
-
-      <div class="footer">
-        <div>© <span id="y"></span> Andrea Antonuzzo</div>
-        <div><a href="../../">Home</a></div>
-      </div>
+    <div class="footer">
+      <div>© <span id="y"></span> Andrea Antonuzzo</div>
+      <div><a href="../../">Home</a></div>
     </div>
 
   </div>
@@ -116,6 +202,7 @@
   </script>
 </body>
 </html>
+
 
 
 
