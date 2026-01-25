@@ -1,9 +1,122 @@
 <!doctype html>
-<html>
-  <head><meta charset="utf-8"><title>Corporate Finance</title></head>
-  <body>
-    <h1>Corporate Finance</h1>
-    <p>Work in progress.</p>
-    <p><a href="../">Back to home</a></p>
-  </body>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Corporate Finance</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--bg:#0b1220; --text:#eaf0ff; --muted:rgba(234,240,255,.75);
+--panel:rgba(255,255,255,.06); --border:rgba(255,255,255,.12);
+--accent:#7dd3fc; --shadow:0 14px 40px rgba(0,0,0,.35); --radius:18px;
+}
+
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:Inter,system-ui;
+color:var(--text);
+background:
+radial-gradient(900px 500px at 15% 10%, rgba(125,211,252,.22), transparent 60%),
+radial-gradient(700px 450px at 85% 20%, rgba(167,139,250,.18), transparent 60%),
+var(--bg);
+min-height:100vh;
+}
+
+.container{max-width:900px;margin:auto;padding:40px 18px}
+
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.card{
+margin-top:18px;
+padding:20px;
+border-radius:var(--radius);
+background:var(--panel);
+border:1px solid var(--border);
+box-shadow:var(--shadow);
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px;
+margin-top:20px;
+}
+
+@media(max-width:800px){
+.grid{grid-template-columns:1fr}
+}
+
+.tag{
+display:inline-block;
+margin-right:6px;
+margin-top:6px;
+padding:6px 10px;
+border-radius:999px;
+border:1px solid var(--border);
+font-size:12px;
+}
+
+.cta{
+display:inline-block;
+margin-top:10px;
+font-weight:600;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<a href="../">← Back to home</a>
+
+<h1>Corporate Finance</h1>
+
+<p style="color:var(--muted)">
+Valuation and financial performance projects (DCF, WACC, multiples).
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>Valuation</h3>
+<p style="color:var(--muted)">
+Company valuation projects using DCF, WACC frameworks, and multiples.
+</p>
+
+<span class="tag">DCF</span>
+<span class="tag">WACC</span>
+<span class="tag">Multiples</span>
+
+<br>
+<a class="cta" href="valuation/">Open Valuation →</a>
+</div>
+
+<div class="card">
+<h3>Financial Performance</h3>
+<p style="color:var(--muted)">
+Financial analysis, KPIs, profitability, and performance diagnostics.
+</p>
+
+<span class="tag">KPIs</span>
+<span class="tag">Margins</span>
+<span class="tag">Performance</span>
+
+<br>
+<a class="cta" href="financial-performance/">Open Financial Performance →</a>
+</div>
+
+</div>
+
+</div>
+</body>
 </html>
+
