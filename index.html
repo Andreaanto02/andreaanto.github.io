@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Andrea Antonuzzo | Portfolio</title>
 
-  <!-- Modern font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,8 +17,8 @@
       --text: #eaf0ff;
       --muted: rgba(234,240,255,0.75);
       --border: rgba(255,255,255,0.12);
-      --accent: #7dd3fc;   /* light blue */
-      --accent2:#a78bfa;   /* soft purple */
+      --accent: #7dd3fc;
+      --accent2:#a78bfa;
       --shadow: 0 14px 40px rgba(0,0,0,0.35);
       --radius: 18px;
     }
@@ -27,7 +26,7 @@
     *{box-sizing:border-box}
     body{
       margin:0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-family: Inter, system-ui;
       color: var(--text);
       background:
         radial-gradient(900px 500px at 15% 10%, rgba(125,211,252,0.22), transparent 60%),
@@ -65,7 +64,6 @@
       border:1px solid var(--border);
       color: var(--muted);
       font-size: 13px;
-      backdrop-filter: blur(10px);
     }
 
     .hero{
@@ -74,13 +72,11 @@
       background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
       border: 1px solid var(--border);
       box-shadow: var(--shadow);
-      backdrop-filter: blur(10px);
     }
 
     .hero-header{
       display:flex;
       align-items:center;
-      justify-content:space-between;
       gap: 18px;
       flex-wrap: wrap;
       margin-bottom: 10px;
@@ -99,13 +95,11 @@
       border-radius: 999px;
       object-fit: cover;
       border: 2px solid rgba(255,255,255,0.18);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
     }
 
     h1{
       margin:0 0 8px 0;
       font-size: 44px;
-      line-height: 1.05;
       letter-spacing: -0.02em;
     }
 
@@ -113,10 +107,6 @@
       margin:0;
       color: var(--muted);
       font-size: 16px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      align-items:center;
       line-height: 1.6;
     }
 
@@ -132,7 +122,6 @@
       border-radius:999px;
       border:1px solid var(--border);
       background: rgba(255,255,255,0.06);
-      color: rgba(234,240,255,0.88);
       font-size: 12px;
     }
 
@@ -149,199 +138,122 @@
     }
 
     .card{
-      padding: 18px 18px 16px;
+      padding: 18px;
       border-radius: var(--radius);
       background: rgba(255,255,255,0.06);
       border:1px solid var(--border);
-      box-shadow: 0 10px 28px rgba(0,0,0,0.22);
-      transition: transform .15s ease, background .15s ease, border-color .15s ease;
-    }
-    .card:hover{
-      transform: translateY(-2px);
-      background: rgba(255,255,255,0.08);
-      border-color: rgba(125,211,252,0.35);
     }
 
-    .card h3{
-      margin: 0 0 8px 0;
-      font-size: 18px;
-      letter-spacing: -0.01em;
-    }
-    .card p{
-      margin: 0 0 12px 0;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.6;
-    }
+    .card h3{margin:0 0 8px}
+    .card p{margin:0 0 12px;color:var(--muted)}
 
-    .tags{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-      margin: 10px 0 12px;
-    }
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+
     .tag{
-      font-size: 12px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.05);
-      color: rgba(234,240,255,0.9);
+      font-size:12px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
     }
 
-    .cta{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      margin-top: 2px;
-      font-weight: 600;
-      font-size: 13px;
-    }
+    .cta{font-weight:600;font-size:13px}
 
-    .section{
-      margin-top: 24px;
-    }
-    .section h2{
-      margin: 18px 0 10px;
-      font-size: 16px;
-      letter-spacing: -0.01em;
-      color: rgba(234,240,255,0.92);
-    }
+    .section{margin-top:24px}
 
     .footer{
       margin-top: 26px;
       padding-top: 14px;
-      border-top: 1px solid rgba(255,255,255,0.12);
+      border-top: 1px solid var(--border);
       display:flex;
-      flex-wrap:wrap;
-      gap:10px;
       justify-content:space-between;
+      font-size: 13px;
       color: var(--muted);
-      font-size: 13px;
-    }
-    .footer a{color: rgba(234,240,255,0.92)}
-
-    /* CV button */
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:10px 14px;
-      border-radius: 14px;
-      background: rgba(125,211,252,0.14);
-      border: 1px solid rgba(125,211,252,0.35);
-      color: var(--text);
-      font-weight: 700;
-      font-size: 13px;
-      text-decoration: none;
-    }
-    .btn:hover{
-      text-decoration:none;
-      filter: brightness(1.05);
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
+<div class="container">
 
-    <div class="topbar">
-      <div class="pill">📍 New York</div>
-      <div class="pill">Updated regularly</div>
-    </div>
+<div class="topbar">
+  <div class="pill">📍 New York</div>
+a
+  <div class="pill">Updated regularly</div>
+</div>
 
-    <div class="hero">
+<div class="hero">
 
-      <div class="hero-header">
-        <div class="hero-left">
-          <!-- ✅ path robusto su GitHub Pages -->
-          <img class="profile-pic" src="/andreaanto.github.io/profile.jpg" alt="Andrea Antonuzzo" />
+  <div class="hero-header">
+    <div class="hero-left">
+      <img class="profile-pic" src="/andreaanto.github.io/profile.jpg">
 
-          <div>
-            <h1>Andrea Antonuzzo</h1>
-            <p class="subtitle">Personal Project Portfolio</p>
-          </div>
-        </div>
-
-        <div class="hero-actions">
-          <!-- ✅ path robusto per il CV -->
-          <a class="btn" href="/andreaanto.github.io/Resume%20Andrea%20Antonuzzo.pdf" target="_blank" rel="noopener">
-            📄 Download CV
-          </a>
-        </div>
-      </div>
-
-      <div class="chips">
-        <span class="chip">M.Sc. Finance @ Stevens Institute of Technology</span>
-        <span class="chip">Consulting &amp; Corporate Finance</span>
-        <span class="chip">U.S. · Italy · Australia · Finland</span>
-      </div>
-
-      <div class="section">
-        <h2>About</h2>
-        <p class="subtitle" style="margin-top:0;">
-          I’m an Italian M.Sc. Finance student at Stevens Institute of Technology, powered by coffee and curiosity.
-          I’m into consulting, corporate finance, and figuring out how businesses actually work.
-          I created this GitHub to share my projects, my progress, and everything I’m learning along the way, from a “quick analysis” to “why is this taking 6 hours”.
-          <br><br>
-          <span style="color:rgba(234,240,255,0.88)">
-            <em>Fun fact:</em> I’ve studied and worked across four countries: the U.S., Italy, Australia, and Finland.
-          </span>
-        </p>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>Portfolio</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Corporate Finance</h3>
-          <p>From DCFs to financial modeling, performance analysis, and full company valuations where Excel, VBA, Power BI, and Tableau turn numbers into (hopefully) smart decisions.</p>
-          <div class="tags">
-            <span class="tag">Valuation</span>
-            <span class="tag">Financial Performance</span>
-          </div>
-
-          <!-- ✅ link robusto (evita 404 per path relativi) -->
-          <a class="cta" href="/andreaanto.github.io/corporate-finance/">Open Corporate Finance →</a>
-        </div>
-
-        <div class="card">
-          <h3>Consulting</h3>
-          <p>Go-to-market strategy and turnaround breaking down ambiguity aligning processes, and turning ideas into execution through analysis and practical solutions (having fun along the way).</p>
-          <div class="tags">
-            <span class="tag">Go-To-Market</span>
-            <span class="tag">Turnaround</span>
-            <span class="tag">Restructuring</span>
-          </div>
-
-          <!-- ✅ link robusto -->
-          <a class="cta" href="/andreaanto.github.io/consulting/">Open Consulting →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer">
       <div>
-        LinkedIn:
-        <a href="https://www.linkedin.com/in/andrea-antonuzzo/" target="_blank" rel="noopener">
-          andrea-antonuzzo
-        </a>
-        · Email:
-        <a href="mailto:aantonuz@stevens.edu">aantonuz@stevens.edu</a>
+        <h1>Andrea Antonuzzo</h1>
+        <p class="subtitle">Personal Project Portfolio</p>
       </div>
-
-      <div>© <span id="y"></span> Andrea Antonuzzo</div>
     </div>
-
   </div>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <div class="chips">
+    <span class="chip">M.Sc. Finance @ Stevens Institute of Technology</span>
+    <span class="chip">Consulting & Corporate Finance</span>
+    <span class="chip">U.S. · Italy · Australia · Finland</span>
+  </div>
+
+  <div class="section">
+    <h2>About</h2>
+    <p class="subtitle">
+      I’m an Italian M.Sc. Finance student at Stevens Institute of Technology, powered by coffee and curiosity.
+      I’m into consulting, corporate finance, and figuring out how businesses actually work.
+      <br><br>
+      <em>Fun fact:</em> I’ve studied and worked across four countries: the U.S., Italy, Australia, and Finland.
+    </p>
+  </div>
+
+</div>
+
+<div class="section">
+<h2>Portfolio</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Corporate Finance</h3>
+<p>From DCFs to modeling, performance analysis, and full company valuations.</p>
+<div class="tags">
+<span class="tag">Valuation</span>
+<span class="tag">Financial Performance</span>
+</div>
+<a class="cta" href="/andreaanto.github.io/corporate-finance/">Open Corporate Finance →</a>
+</div>
+
+<div class="card">
+<h3>Consulting</h3>
+<p>Go-to-market strategy and turnaround breaking down ambiguity aligning processes, and turning ideas into execution.</p>
+<div class="tags">
+<span class="tag">Go-To-Market</span>
+<span class="tag">Turnaround</span>
+<span class="tag">Restructuring</span>
+</div>
+<a class="cta" href="/andreaanto.github.io/consulting/">Open Consulting →</a>
+</div>
+
+</div>
+</div>
+
+<div class="footer">
+<div>© <span id="y"></span> Andrea Antonuzzo</div>
+</div>
+
+</div>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+</script>
+
 </body>
 </html>
+
 
 
 
