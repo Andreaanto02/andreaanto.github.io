@@ -80,7 +80,6 @@
       color: var(--muted);
       font-size: 14px;
       line-height:1.6;
-      max-width: 88ch;
     }
     .chips{
       margin-top: 12px;
@@ -189,20 +188,38 @@
     <div class="hero">
       <h1>Consulting</h1>
 
+      <!-- ✅ DESCRIPTION: updated here (this is your "first photo") -->
       <p class="subtitle">
-        Go-to-market strategy and turnaround breaking down ambiguity aligning processes, and turning ideas into execution through analysis and practical solutions (having fun along the way).
+        Go-to-market strategy and turnaround breaking down ambiguity, aligning processes, and turning ideas into execution through analysis and practical solutions (having fun along the way).
       </p>
 
+      <!-- ✅ Keep only these two chips -->
       <div class="chips">
         <span class="chip">Go-To-Market</span>
+        <span class="chip">Turnaround &amp; Restructuring</span>
       </div>
     </div>
 
     <div class="section">
       <h2>Areas</h2>
 
+      <!-- ✅ Two cards: LEFT Turnaround, RIGHT Go-To-Market -->
       <div class="grid">
 
+        <!-- LEFT -->
+        <div class="card">
+          <h3>Turnaround &amp; Restructuring</h3>
+          <p>Performance diagnosis, cash focus, cost actions, and restructuring planning.</p>
+          <div class="tags">
+            <span class="tag">Liquidity</span>
+            <span class="tag">Cost Actions</span>
+            <span class="tag">Restructuring</span>
+          </div>
+          <!-- IMPORTANT: folder name in your repo is turnaround-restructuring -->
+          <a class="cta" href="turnaround-restructuring/">Open Turnaround →</a>
+        </div>
+
+        <!-- RIGHT -->
         <div class="card">
           <h3>Go-To-Market</h3>
           <p>Market entry, positioning, growth plan, and launch execution.</p>
@@ -225,6 +242,7 @@
   </div>
 </body>
 </html>
+
 
 
 
